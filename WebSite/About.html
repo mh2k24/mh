@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About MH</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: #272727;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* 背景圖片樣式 */
+    .background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('./Image/MHLogoB.png') no-repeat center center/cover;
+      z-index: -1;
+    }
+
+    /* 上方導覽列 */
+    .navbar {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgb(0, 0, 0);
+      border-bottom: 1px solid #333;
+    }
+
+    .navbar a img {
+      height: 40px;
+    }
+
+    .nav-buttons button {
+      background: none;
+      border: 1px solid #666;
+      color: white;
+      padding: 8px 16px;
+      margin-left: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: color 0.3s ease;
+    }
+
+    .nav-buttons button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+      z-index: -1;
+      transition: left 0.5s;
+    }
+
+    .nav-buttons button:hover::before {
+      left: 100%;
+    }
+
+    .nav-buttons button:hover {
+      color: #ff0000;
+    }
+
+    /* 版權資訊 */
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 3px;
+      font-size: 10px;
+      color: #aaa;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-image"></div>
+
+  <div class="navbar">
+    <a href="Index_loading.html">
+      <img src="Image/MHLogo.png" alt="Logo">
+    </a>
+    <div class="nav-buttons">
+      <button onclick="location.href='page1.html'">尚未開放</button>
+      <button onclick="location.href='Location.html'">各區據點</button>
+      <button onclick="location.href='Gathering.html'">車聚活動</button>
+      <button onclick="location.href='CooperativeStores.html'">特約商店</button>
+      <button onclick="location.href='Links.html'">各式連結</button>
+      <button onclick="location.href='Contact.html'">聯絡我們</button>
+      <button onclick="location.href='About.html'">關於我們</button>
+    </div>
+  </div>
+
+  <!-- 介紹區塊 -->
+   <div> 
+        <h1 style="text-align: center; margin-top: 20px;">關於 Midnight Homies Club</h1>
+        <p style="text-align: center; font-size: 18px;">從兩個人每週洗車，到最後決定創辦。</p>
+        <p style="text-align: center; font-size: 12px;">我們嚮往以車會友，將各行各業的精英與人才聚在一起，
+          共創更多價值，促成更多交易!<br>為此，我們不斷的努力!</p>
+   </div>
+  <footer>
+    Copyright © 2025 Midnight Homies Club. All rights reserved.
+  </footer>
+</body>
+</html>
